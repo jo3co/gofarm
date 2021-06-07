@@ -43,25 +43,21 @@ public class GoFarmGame : MonoBehaviour
     //public Text areaLabel;
     //public Text takenLabel;
 
-    public Sprite whiteBorder;
-    public Sprite greenBorder;
+    public GameObject  whiteBorder;
+    public GameObject greenBorder;
 
     public Image borderImage;
 
     private bool activeFarmObject = false;
     private GameObject currentFarmObject = null;
 
-    public Canvas uIMenuCanvas;
-    public Canvas uIGameCanvas;
-
     public bool isGameEnabled = false;
 
-    public GameObject interfaceA;
-    public GameObject interfaceB;
-    public GameObject interfaceC;
-    public GameObject interfaceD;
-
     public AudioSource touchAudioSource;
+
+    public Camera arCamera;
+
+    private int currentScore;
 
     void Start()
     {
@@ -71,17 +67,19 @@ public class GoFarmGame : MonoBehaviour
 
         farmPlaneObjects = new List<FarmPlaneObject>();
 
-        arOrigin.enabled = false;
-        aRSession.enabled = false;
+        currentScore = 0;
+
+        //arOrigin.enabled = false;
+        //aRSession.enabled = false;
     }
 
     public void StartGame() {
         //uIMenuCanvas.enabled = false;
         //uIGameCanvas.enabled = true;
 
-        isGameEnabled = true;
-        arOrigin.enabled = true;
-        aRSession.enabled = true;
+        //isGameEnabled = true;
+        //arOrigin.enabled = true;
+        //aRSession.enabled = true;
         
     }
 
@@ -102,18 +100,19 @@ public class GoFarmGame : MonoBehaviour
         arOrigin.enabled = false;
         aRSession.enabled = false;
 
+        PlayerPrefs.SetInt("score", currentScore);
+
+        SceneManager.LoadScene(2);
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(0);
     }
 
     void OnApplicationPause( bool pauseStatus )
     {
         if(pauseStatus) {
-            LeaveGame();
-        }
-        else {
-            interfaceA.SetActive(true);
-            interfaceB.SetActive(false);
-            interfaceC.SetActive(false);
-            interfaceD.SetActive(false);
+            SceneManager.LoadScene(0);
         }
         
     }
@@ -155,6 +154,9 @@ public class GoFarmGame : MonoBehaviour
 
         touchAudioSource.Play(0);
 
+        whiteBorder.SetActive(true);
+        greenBorder.SetActive(false);
+
         foreach (var plane in planeManager.trackables)
         {
             plane.gameObject.SetActive(false);
@@ -162,36 +164,47 @@ public class GoFarmGame : MonoBehaviour
 
         if(name.Contains("Cabra")) {
             Debug.Log("gofarm : Cabra");
+            currentScore += 40;
         }
         if(name.Contains("Cachorro")) {
             Debug.Log("gofarm : Cachorro");
+            currentScore += 70;
         }
         if(name.Contains("Cafe")) {
             Debug.Log("gofarm : Cafe");
+            currentScore += 90;
         }
         if(name.Contains("Cavalo")) {
             Debug.Log("gofarm : Cavalo");
+            currentScore += 60;
         }
         if(name.Contains("Galinha")) {
             Debug.Log("gofarm : Galinha");
+            currentScore += 100;
         }
         if(name.Contains("Girassol")) {
             Debug.Log("gofarm : Girassol");
+            currentScore += 50;
         }
         if(name.Contains("Laranja")) {
             Debug.Log("gofarm : Laranja");
+            currentScore += 30;
         }
         if(name.Contains("Melancia")) {
             Debug.Log("gofarm : Melancia");
+            currentScore += 70;
         }
         if(name.Contains("Pato")) {
             Debug.Log("gofarm : Pato");
+            currentScore += 60;
         }
         if(name.Contains("Porco")) {
             Debug.Log("gofarm : Porco");
+            currentScore += 80;
         }
         if(name.Contains("Vaca")) {
             Debug.Log("gofarm : Vaca");
+            currentScore += 50;
         }
     }
 
@@ -220,7 +233,7 @@ public class GoFarmGame : MonoBehaviour
         else {
             rand = randPrefabNumMax;
         }
-        currentFarmObject = Instantiate(farmPrefabs[rand], center, Quaternion.LookRotation(new Vector3(Camera.main.transform.forward.x, 0, -Camera.main.transform.forward.z))) as GameObject;
+        currentFarmObject = Instantiate(farmPrefabs[10], center, Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x, 0, -arCamera.transform.forward.z))) as GameObject;
         if(dist < 1.5) {
             float minScale = 0.7f;
             if(dist < 0.8) {
@@ -243,6 +256,9 @@ public class GoFarmGame : MonoBehaviour
         farmPlaneObjects.Add(farmObj);
 
         activeFarmObject = true;
+
+        whiteBorder.SetActive(false);
+                    greenBorder.SetActive(true);
 
     }
 
@@ -276,7 +292,11 @@ public class GoFarmGame : MonoBehaviour
                 //distanceLabel.text = hits[0].distance.ToString();
                 //areaLabel.text = planeArea.ToString();
 
-                borderImage.sprite = greenBorder;
+                if(!activeFarmObject) {
+                    whiteBorder.SetActive(false);
+                    greenBorder.SetActive(true);
+                }
+                
 
                 Debug.Log("gofarm create object "+hits[0].trackableId.ToString());
                 
@@ -288,8 +308,10 @@ public class GoFarmGame : MonoBehaviour
                 }
             } 
             else {
-                if(borderImage.sprite != whiteBorder)
-                    borderImage.sprite = whiteBorder;
+                if(!activeFarmObject) {
+                    whiteBorder.SetActive(true);
+                    greenBorder.SetActive(false);
+                }
             }
             
         }

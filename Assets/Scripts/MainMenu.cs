@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame ()
     {
-        bgAudioSource.Stop();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //bgAudioSource.Stop();
+        SceneManager.LoadScene(1);
     }
 }
