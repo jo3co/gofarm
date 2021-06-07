@@ -182,7 +182,7 @@ public class GoFarmGame : MonoBehaviour
             Debug.Log("gofarm : Galinha");
             currentScore += 100;
         }
-        if(name.Contains("Girassol")) {
+        if(name.Contains("Girasol")) {
             Debug.Log("gofarm : Girassol");
             currentScore += 50;
         }
@@ -224,16 +224,17 @@ public class GoFarmGame : MonoBehaviour
     private void createFarmObj(String id, float area, float dist, Pose position, Vector3 center) {
         Debug.Log("gofarm : #" + id + " plane area " + area.ToString() + " dist: " + dist.ToString());
 
-        int randPrefabNumMin = UnityEngine.Random.Range(0, 4);
-        int randPrefabNumMax = UnityEngine.Random.Range(4, 12);
-        int rand = 0;
+        int rand = UnityEngine.Random.Range(0, 12);
+        //int randPrefabNumMax = UnityEngine.Random.Range(4, 12);
+        //int rand = 0;
         if(area < 1.5f) {
-            rand = randPrefabNumMin;
+            //rand = randPrefabNumMin;
         }
         else {
-            rand = randPrefabNumMax;
+            //rand = randPrefabNumMax;
         }
-        currentFarmObject = Instantiate(farmPrefabs[10], center, Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x, 0, -arCamera.transform.forward.z))) as GameObject;
+
+        currentFarmObject = Instantiate(farmPrefabs[rand], center, Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x, 0, -arCamera.transform.forward.z))) as GameObject;
         if(dist < 1.5) {
             float minScale = 0.7f;
             if(dist < 0.8) {
@@ -264,7 +265,7 @@ public class GoFarmGame : MonoBehaviour
 
     IEnumerator StartCooldownTimer() {
         cooldownFarmObject = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         cooldownFarmObject = false;
     }

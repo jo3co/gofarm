@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 54a15cba89c304045ac62d503cd7e31b
   - enabled: 1
-    path: Assets/Scenes/EndGame.unity
-    guid: 1079daf48a88ddd4e8d42471dde06358
+    path: Assets/Scenes/EndGame_ComScore.unity
+    guid: 7e4de40106191f64ea434ebf4647aaf6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ef0a3cc23de825d4c909bca391eaa957,
       type: 2}
