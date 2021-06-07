@@ -736,7 +736,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 39
     mosaicPosition: {x: 0, y: 0}
   - name: START
@@ -750,7 +750,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 30
     mosaicPosition: {x: 0, y: 0}
   - name: your harvest of fun
@@ -764,7 +764,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 24
     mosaicPosition: {x: 0, y: 0}
   - name: CNA_Tela1
@@ -806,7 +806,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 4
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 15
     mosaicPosition: {x: 0, y: 0}
   - name: <Clip Group>
@@ -820,7 +820,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 4
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 12
     mosaicPosition: {x: 0, y: 0}
   - name: <Group>
@@ -848,7 +848,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 4
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 7
     mosaicPosition: {x: 0, y: 0}
   - name: <Group>
@@ -869,7 +869,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 4
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
   - name: Sky
