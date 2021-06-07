@@ -56,6 +56,13 @@ public class GoFarmGame : MonoBehaviour
 
     public bool isGameEnabled = false;
 
+    public GameObject interfaceA;
+    public GameObject interfaceB;
+    public GameObject interfaceC;
+    public GameObject interfaceD;
+
+    public AudioSource touchAudioSource;
+
     void Start()
     {
         arOrigin = FindObjectOfType<ARSessionOrigin>();
@@ -75,6 +82,7 @@ public class GoFarmGame : MonoBehaviour
         isGameEnabled = true;
         arOrigin.enabled = true;
         aRSession.enabled = true;
+        
     }
 
     public void LeaveGame ()
@@ -100,6 +108,12 @@ public class GoFarmGame : MonoBehaviour
     {
         if(pauseStatus) {
             LeaveGame();
+        }
+        else {
+            interfaceA.SetActive(true);
+            interfaceB.SetActive(false);
+            interfaceC.SetActive(false);
+            interfaceD.SetActive(false);
         }
         
     }
@@ -138,6 +152,8 @@ public class GoFarmGame : MonoBehaviour
         farmPlaneObjects.Clear();
 
         StartCoroutine(StartCooldownTimer());
+
+        touchAudioSource.Play(0);
 
         foreach (var plane in planeManager.trackables)
         {
@@ -204,7 +220,7 @@ public class GoFarmGame : MonoBehaviour
         else {
             rand = randPrefabNumMax;
         }
-        currentFarmObject = Instantiate(farmPrefabs[3], center, Quaternion.LookRotation(new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z))) as GameObject;
+        currentFarmObject = Instantiate(farmPrefabs[rand], center, Quaternion.LookRotation(new Vector3(Camera.main.transform.forward.x, 0, -Camera.main.transform.forward.z))) as GameObject;
         if(dist < 1.5) {
             float minScale = 0.7f;
             if(dist < 0.8) {
