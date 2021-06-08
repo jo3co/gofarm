@@ -7,13 +7,18 @@ public class MainMenu : MonoBehaviour
 {
     public AudioSource bgAudioSource;
 
+
+    public GameObject lastMenu;
+
     public void Start() {
-        bgAudioSource.Play();
+        if(!bgAudioSource.isPlaying)
+            bgAudioSource.Play();
     }
 
     public void PlayGame ()
     {
+        lastMenu.SetActive(false);
         bgAudioSource.Stop();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 }
