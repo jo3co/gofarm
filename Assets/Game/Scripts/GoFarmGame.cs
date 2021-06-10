@@ -30,6 +30,8 @@ public class GoFarmGame : MonoBehaviour
 
     public GameObject[] farmPrefabs;
 
+    public GameObject[] farmFXPrefabs;
+
     private List<FarmPlaneObject> farmPlaneObjects;
 
     private bool cooldownFarmObject = false;
@@ -194,9 +196,9 @@ public class GoFarmGame : MonoBehaviour
 
         currentFarmObject = Instantiate(farmPrefabs[rand], center, Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x, 0, -arCamera.transform.forward.z))) as GameObject;
         currentFarmObject.SetActive(true);
-        if(dist < 1.5) {
+        if(dist < 1.5f) {
             float minScale = 0.7f;
-            if(dist < 0.8) {
+            if(dist < 0.5) {
                 minScale = 0.3f;
             }
             var objScale = new Vector3(
@@ -204,9 +206,22 @@ public class GoFarmGame : MonoBehaviour
             currentFarmObject.transform.localScale.y * minScale,
             currentFarmObject.transform.localScale.z * minScale);
 
-        currentFarmObject.transform.localScale = objScale;
+            currentFarmObject.transform.localScale = objScale;
         }
-        
+        else {
+            float minScale = 1.2f;
+            var objScale = new Vector3(
+            currentFarmObject.transform.localScale.x * minScale,
+            currentFarmObject.transform.localScale.y * minScale,
+            currentFarmObject.transform.localScale.z * minScale);
+
+            currentFarmObject.transform.localScale = objScale;
+        }
+
+        int randFX = UnityEngine.Random.Range(0, 5);
+        var farmFXObj = Instantiate(farmFXPrefabs[randFX], center, Quaternion.identity);
+        farmFXObj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
+        farmFXObj.transform.parent = currentFarmObject.transform;
 
         var farmObj = new FarmPlaneObject();
         farmObj.gameId = id;

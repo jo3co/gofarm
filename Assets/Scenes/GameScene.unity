@@ -1709,6 +1709,13 @@ MonoBehaviour:
   - {fileID: 8375799898648469315, guid: e83debf402c52b542be19ffd26e8d4fd, type: 3}
   - {fileID: 6926736928878505548, guid: 918589787f704af4994d87fff38a9a8b, type: 3}
   - {fileID: 1323708235}
+  farmFXPrefabs:
+  - {fileID: 1390129668557460, guid: 7ec11f4b2f062524f92386d2ef4b618c, type: 3}
+  - {fileID: 1578469459646218, guid: 0d57e66d7df915b4aabb02005dd9f8b1, type: 3}
+  - {fileID: 1702015823946804, guid: da4957823d91d8a4c878dec336e7dfe1, type: 3}
+  - {fileID: 1915466051127210, guid: 0d069c3f7af0a6d4ea124420c9c45b78, type: 3}
+  - {fileID: 1323810789808520, guid: cfd858b69e847b4468421c2fd8411837, type: 3}
+  - {fileID: 1051027301378462, guid: efe5e46a88f1c73478f88dadde84347b, type: 3}
   whiteBorder: {fileID: 125022851}
   greenBorder: {fileID: 62188279}
   isGameEnabled: 0
