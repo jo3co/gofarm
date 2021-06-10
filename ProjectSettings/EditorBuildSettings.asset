@@ -15,6 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/EndGame_ComScore.unity
     guid: 7e4de40106191f64ea434ebf4647aaf6
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 96cd9cde29a7d8b46a675c800b174a1b,
+      type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: ef0a3cc23de825d4c909bca391eaa957,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 71e0dfce6339e4b43add15b0ef2798c6,

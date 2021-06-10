@@ -124,7 +124,7 @@ GameObject:
   m_TagString: FarmObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1401892755874129340
 Transform:
@@ -153,12 +153,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2183317614816538034}
   - component: {fileID: 4526341426269946339}
+  - component: {fileID: 7742589917203346514}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2183317614816538034
 Transform:
@@ -194,6 +195,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &7742589917203346514
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7852510731622326023}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 694bcc7ee085b384fa332a84ae564e26, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &736819679150170929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -286,6 +383,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3991937874498957618, guid: a33a1f71058c3a04bb629ddd4e9b6548,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33a1f71058c3a04bb629ddd4e9b6548, type: 3}
 --- !u!1 &2765069093057655766 stripped
@@ -311,6 +413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712007225109644400, guid: a258002e996cdd644bd14b775f3000c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5536463897364208955, guid: a258002e996cdd644bd14b775f3000c6,
         type: 3}
@@ -382,10 +489,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1401892755874129340}
     m_Modifications:
+    - target: {fileID: 3490935897995886481, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3490935897995886484, guid: da336ac48083ec645975133b0a2fdc9f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490935898088881248, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3490935898088881255, guid: da336ac48083ec645975133b0a2fdc9f,
         type: 3}
@@ -397,10 +514,25 @@ PrefabInstance:
       propertyPath: startDelay.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3490935898648225055, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3490935898921563104, guid: da336ac48083ec645975133b0a2fdc9f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490935898921563117, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490935899499940643, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3490935899499940646, guid: da336ac48083ec645975133b0a2fdc9f,
         type: 3}
@@ -481,6 +613,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490935899570961514, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490935899743902672, guid: da336ac48083ec645975133b0a2fdc9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3490935899743902679, guid: da336ac48083ec645975133b0a2fdc9f,
         type: 3}

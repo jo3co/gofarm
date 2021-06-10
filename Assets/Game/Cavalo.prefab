@@ -29,7 +29,7 @@ GameObject:
   m_TagString: FarmObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2824102731613850935
 Transform:
@@ -154,12 +154,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7514321930083043382}
   - component: {fileID: 7267824363170905215}
+  - component: {fileID: 6479817472834631181}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7514321930083043382
 Transform:
@@ -195,6 +196,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &6479817472834631181
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147531360005964081}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d4969d4178933b4097aa68732e85dd2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!64 &7008563195561016457
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -220,6 +317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712007225109644400, guid: a258002e996cdd644bd14b775f3000c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5536463897364208955, guid: a258002e996cdd644bd14b775f3000c6,
         type: 3}
@@ -311,6 +413,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1783526981301944481, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1783526981301944486, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -386,10 +493,25 @@ PrefabInstance:
       propertyPath: startDelay.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1783526981627867063, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783526981943794681, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1783526981943794686, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
         type: 3}
       propertyPath: startDelay.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783526982025660248, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1783526982025660253, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
         type: 3}
@@ -401,15 +523,30 @@ PrefabInstance:
       propertyPath: startDelay.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1783526982055672317, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1783526982292861699, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
         type: 3}
       propertyPath: startDelay.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1783526982292861758, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1783526982833535617, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
         type: 3}
       propertyPath: startDelay.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783526982833535676, guid: 8ccd2b3a26dfde94f9d334e7421379cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccd2b3a26dfde94f9d334e7421379cc, type: 3}

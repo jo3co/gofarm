@@ -28,25 +28,14 @@ public class GoFarmGame : MonoBehaviour
 
     public ARPlaneManager planeManager;
 
-    public GameObject placementIndicator;
-
-    public ARPlane arPlane;
-
     public GameObject[] farmPrefabs;
 
     private List<FarmPlaneObject> farmPlaneObjects;
 
     private bool cooldownFarmObject = false;
 
-    //public Text idRaycastLabel;
-    //public Text distanceLabel;
-    //public Text areaLabel;
-    //public Text takenLabel;
-
     public GameObject  whiteBorder;
     public GameObject greenBorder;
-
-    public Image borderImage;
 
     private bool activeFarmObject = false;
     private GameObject currentFarmObject = null;
@@ -68,25 +57,14 @@ public class GoFarmGame : MonoBehaviour
         farmPlaneObjects = new List<FarmPlaneObject>();
 
         currentScore = 0;
-
-        //arOrigin.enabled = false;
-        //aRSession.enabled = false;
     }
 
     public void StartGame() {
-        //uIMenuCanvas.enabled = false;
-        //uIGameCanvas.enabled = true;
-
-        //isGameEnabled = true;
-        //arOrigin.enabled = true;
-        //aRSession.enabled = true;
         
     }
 
     public void LeaveGame ()
     {
-        //uIMenuCanvas.enabled = true;
-        //uIGameCanvas.enabled = false;
         isGameEnabled = false;
 
         if(currentFarmObject) {
@@ -120,34 +98,25 @@ public class GoFarmGame : MonoBehaviour
     void Update()
     {
         UpdatePlacementePose();
-        
-         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
-    {
-        Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-        RaycastHit raycastHit;
-        if (Physics.Raycast(raycast, out raycastHit))
-        {
-            Debug.Log("gofarm raycast found : "+raycastHit.collider.tag);
 
-            if(raycastHit.collider.tag.Equals("FarmObj")) {
-               
-                captureFarmObject(raycastHit.collider.name);
-                
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit raycastHit;
+            if (Physics.Raycast(raycast, out raycastHit))
+            {
+                if(raycastHit.collider.tag.Equals("FarmObj")) {
+                    captureFarmObject(raycastHit.collider.name);
+                }
             }
-            
-        }
-    }
-        
+        }      
     }
 
     private void captureFarmObject(String name) {
-        Debug.Log("gofarm capture objcet "+name);
-
         Destroy(currentFarmObject);
+
         currentFarmObject = null;
-
         activeFarmObject = false;
-
         farmPlaneObjects.Clear();
 
         StartCoroutine(StartCooldownTimer());
@@ -163,47 +132,36 @@ public class GoFarmGame : MonoBehaviour
         }
 
         if(name.Contains("Cabra")) {
-            Debug.Log("gofarm : Cabra");
             currentScore += 40;
         }
         if(name.Contains("Cachorro")) {
-            Debug.Log("gofarm : Cachorro");
             currentScore += 70;
         }
         if(name.Contains("Cafe")) {
-            Debug.Log("gofarm : Cafe");
             currentScore += 90;
         }
         if(name.Contains("Cavalo")) {
-            Debug.Log("gofarm : Cavalo");
             currentScore += 60;
         }
         if(name.Contains("Galinha")) {
-            Debug.Log("gofarm : Galinha");
             currentScore += 100;
         }
         if(name.Contains("Girasol")) {
-            Debug.Log("gofarm : Girassol");
             currentScore += 50;
         }
         if(name.Contains("Laranja")) {
-            Debug.Log("gofarm : Laranja");
             currentScore += 30;
         }
         if(name.Contains("Melancia")) {
-            Debug.Log("gofarm : Melancia");
             currentScore += 70;
         }
         if(name.Contains("Pato")) {
-            Debug.Log("gofarm : Pato");
             currentScore += 60;
         }
         if(name.Contains("Porco")) {
-            Debug.Log("gofarm : Porco");
             currentScore += 80;
         }
         if(name.Contains("Vaca")) {
-            Debug.Log("gofarm : Vaca");
             currentScore += 50;
         }
     }
@@ -224,7 +182,7 @@ public class GoFarmGame : MonoBehaviour
     private void createFarmObj(String id, float area, float dist, Pose position, Vector3 center) {
         Debug.Log("gofarm : #" + id + " plane area " + area.ToString() + " dist: " + dist.ToString());
 
-        int rand = UnityEngine.Random.Range(0, 12);
+        int rand = UnityEngine.Random.Range(0, 11);
         //int randPrefabNumMax = UnityEngine.Random.Range(4, 12);
         //int rand = 0;
         if(area < 1.5f) {
@@ -235,6 +193,7 @@ public class GoFarmGame : MonoBehaviour
         }
 
         currentFarmObject = Instantiate(farmPrefabs[rand], center, Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x, 0, -arCamera.transform.forward.z))) as GameObject;
+        currentFarmObject.SetActive(true);
         if(dist < 1.5) {
             float minScale = 0.7f;
             if(dist < 0.8) {
@@ -286,26 +245,15 @@ public class GoFarmGame : MonoBehaviour
 
             var plane = planeManager.GetPlane(hits[0].trackableId);
             if(plane && plane.gameObject.activeSelf) {
-//                 Debug.Log("gofarm plane raycast found");
                 var planeArea = plane.size.x * plane.size.y;
-
-                //idRaycastLabel.text = plane.trackableId.GetHashCode().ToString();
-                //distanceLabel.text = hits[0].distance.ToString();
-                //areaLabel.text = planeArea.ToString();
 
                 if(!activeFarmObject) {
                     whiteBorder.SetActive(false);
                     greenBorder.SetActive(true);
                 }
-                
-
-                Debug.Log("gofarm create object "+hits[0].trackableId.ToString());
-                
+                                
                 if(!hasFarmId(hits[0].trackableId.ToString()) && planeArea > 0.4 && !cooldownFarmObject && !activeFarmObject) {
-                    createFarmObj(hits[0].trackableId.ToString(), planeArea, hits[0].distance, placementPose, plane.center);
-                }
-                else {
-                    // Debug.Log("plane already hit : #"+hits[0].trackableId.GetHashCode().ToString());
+                    createFarmObj(hits[0].trackableId.ToString(), planeArea, hits[0].distance, placementPose, hits[0].pose.position);
                 }
             } 
             else {
