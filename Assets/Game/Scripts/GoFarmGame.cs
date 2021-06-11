@@ -69,17 +69,6 @@ public class GoFarmGame : MonoBehaviour
     {
         isGameEnabled = false;
 
-        if(currentFarmObject) {
-            Destroy(currentFarmObject);
-            currentFarmObject = null;
-        }
-
-        farmPlaneObjects.Clear();
-
-        aRSession.Reset();
-        arOrigin.enabled = false;
-        aRSession.enabled = false;
-
         PlayerPrefs.SetInt("score", currentScore);
 
         SceneManager.LoadScene(2);
