@@ -1279,6 +1279,7 @@ MonoBehaviour:
   CountFPS: 30
   Duration: 1
   NumberFormat: D
+  ValorScore: 0
 --- !u!114 &430564103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1909,7 +1910,7 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 10
+  delay: 5
   duration: 0.5
   easeType: 10
   easeCurve:
@@ -3179,6 +3180,7 @@ MonoBehaviour:
   CountFPS: 30
   Duration: 1
   NumberFormat: D
+  ValorScore: 0
 --- !u!114 &813438161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,6 +4969,7 @@ MonoBehaviour:
   CountFPS: 30
   Duration: 1
   NumberFormat: D
+  ValorScore: 500
 --- !u!114 &1856828558
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class NumberCounter : MonoBehaviour
     public float Duration = 1f;
     public string NumberFormat = "D";
     private int _value;
+    public int ValorScore;
     public int Value
     {
         get
