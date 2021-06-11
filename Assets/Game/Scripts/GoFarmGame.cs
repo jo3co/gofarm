@@ -69,17 +69,6 @@ public class GoFarmGame : MonoBehaviour
     {
         isGameEnabled = false;
 
-        if(currentFarmObject) {
-            Destroy(currentFarmObject);
-            currentFarmObject = null;
-        }
-
-        farmPlaneObjects.Clear();
-
-        aRSession.Reset();
-        arOrigin.enabled = false;
-        aRSession.enabled = false;
-
         PlayerPrefs.SetInt("score", currentScore);
 
         SceneManager.LoadScene(2);
@@ -130,7 +119,7 @@ public class GoFarmGame : MonoBehaviour
 
         foreach (var plane in planeManager.trackables)
         {
-            plane.gameObject.SetActive(false);
+            // plane.gameObject.SetActive(false);
         }
 
         if(name.Contains("Cabra")) {
@@ -173,7 +162,7 @@ public class GoFarmGame : MonoBehaviour
         bool found = false;
         foreach(FarmPlaneObject farm in farmPlaneObjects) {
             if(farm.gameId.Equals(id)) {
-                found = true;
+                // found = true;
                 Debug.Log("gofarm HAS FARM ID");
             }
         }
@@ -239,7 +228,8 @@ public class GoFarmGame : MonoBehaviour
 
     IEnumerator StartCooldownTimer() {
         cooldownFarmObject = true;
-        yield return new WaitForSeconds(5);
+        int randSecs =  UnityEngine.Random.Range(15, 45);
+        yield return new WaitForSeconds(randSecs);
 
         cooldownFarmObject = false;
     }
@@ -256,18 +246,23 @@ public class GoFarmGame : MonoBehaviour
         rayCastMgr.Raycast(screenCenter, hits);
 
         if(hits.Count > 0) {
+            Debug.Log("gofarm raycast hit: "+hits.Count.ToString());
             placementPose =  hits[0].pose;
 
             var plane = planeManager.GetPlane(hits[0].trackableId);
             if(plane && plane.gameObject.activeSelf) {
                 var planeArea = plane.size.x * plane.size.y;
 
-                if(!activeFarmObject) {
+                if(!activeFarmObject && !cooldownFarmObject) {
                     whiteBorder.SetActive(false);
                     greenBorder.SetActive(true);
                 }
+                else {
+                    whiteBorder.SetActive(true);
+                    greenBorder.SetActive(false);
+                }
                                 
-                if(!hasFarmId(hits[0].trackableId.ToString()) && planeArea > 0.4 && !cooldownFarmObject && !activeFarmObject) {
+                if(!hasFarmId(hits[0].trackableId.ToString()) && !cooldownFarmObject && !activeFarmObject) {
                     createFarmObj(hits[0].trackableId.ToString(), planeArea, hits[0].distance, placementPose, hits[0].pose.position);
                 }
             } 
