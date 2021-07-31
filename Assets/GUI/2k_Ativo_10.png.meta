@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: ae23b89124894614794cc5f29b62c596
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -490983997192647220
+    second: 2k_Ativo_10_0
+  - first:
+      213: 1782244115947136701
+    second: 2k_Ativo_10_1
+  - first:
+      213: -8129872347480687256
+    second: 2k_Ativo_10_2
+  - first:
+      213: -3410908650992298000
+    second: 2k_Ativo_10_3
+  - first:
+      213: 2790312686988719921
+    second: 2k_Ativo_10_4
+  - first:
+      213: 6646374603848918371
+    second: 2k_Ativo_10_5
+  - first:
+      213: 9083320954741230545
+    second: 2k_Ativo_10_6
+  - first:
+      213: -492395809336007168
+    second: 2k_Ativo_10_7
+  - first:
+      213: 4394334215878598780
+    second: 2k_Ativo_10_8
+  - first:
+      213: 2518190650844527104
+    second: 2k_Ativo_10_9
+  - first:
+      213: 2804568755019657708
+    second: 2k_Ativo_10_10
+  - first:
+      213: 4725301643768363176
+    second: 2k_Ativo_10_11
+  - first:
+      213: -9160417448360255576
+    second: 2k_Ativo_10_12
+  - first:
+      213: 6072694756269510346
+    second: 2k_Ativo_10_13
+  - first:
+      213: -5681835167104727319
+    second: 2k_Ativo_10_14
+  - first:
+      213: -2873001108995725027
+    second: 2k_Ativo_10_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2k_Ativo_10_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1504
+        width: 592
+        height: 516
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd4ee8e7acaf29f0800000000000000
+      internalID: -490983997192647220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_1
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1516
+        width: 564
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db62f0aa49dcbb810800000000000000
+      internalID: 1782244115947136701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_2
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1518
+        width: 627
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d74238c24ec2f80800000000000000
+      internalID: -8129872347480687256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_5
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1004
+        width: 520
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365a79afc7aac3c50800000000000000
+      internalID: 6646374603848918371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_6
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1004
+        width: 525
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db863868407e0e70800000000000000
+      internalID: 9083320954741230545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_8
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 996
+        width: 605
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70e9c9efafcbfc30800000000000000
+      internalID: 4394334215878598780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 488
+        width: 584
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce13b176c64dbe620800000000000000
+      internalID: 2804568755019657708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_11
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 520
+        width: 424
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8f16d2fc4a39140800000000000000
+      internalID: 4725301643768363176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_12
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 520
+        width: 500
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af523c5dd8afd080800000000000000
+      internalID: -9160417448360255576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_13
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 28
+        width: 516
+        height: 422
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace42d0d4bb864450800000000000000
+      internalID: 6072694756269510346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 12
+        width: 516
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e68668e4011621b0800000000000000
+      internalID: -5681835167104727319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2k_Ativo_10_15
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 31
+        width: 513
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19a10396bc0128d0800000000000000
+      internalID: -2873001108995725027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
